@@ -1,0 +1,11 @@
+.red-square {
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, rgba(255, 0, 0, 1) 0%, rgba(150, 0, 0, 1) 100%);
+  transition: opacity 0.5s ease;
+}
+
+.red-square.hidden {
+  opacity: 0;
+  pointer-events: none;
+}

@@ -1,0 +1,85 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  background-color: #333;
+  color: white;
+
+  .navbar-logo{
+    img {
+      border-radius: 50%;
+      height: 40px;
+    }
+  }
+
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin-left: 1rem;
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .navbar-toggle {
+    display: none; // Nascondi il pulsante hamburger su schermi grandi
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    .icon-bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px 0;
+    }
+  }
+
+
+  @media (max-width: 900px) {
+    .navbar {
+      justify-content: space-between;
+    }
+
+    .navbar-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+
+      &.active {
+        display: flex;
+      }
+
+      li {
+        margin: 0;
+        text-align: center;
+        padding: 1rem 0;
+
+        a {
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    .navbar-toggle {
+      display: block;
+    }
+  }
+}
